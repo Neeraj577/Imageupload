@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <navbar>
+        <fieldset>
+            <a href="#home" class="active">Home</a>
+            <a href="login.html">Login</a>
+
+            <a href="registration.html">Register</a>
+            <a href="viewpost.html">Images</a>
+            <a href="postimage.html">Post Images</a>
+        </fieldset>
+    </navbar>
+
+    <section>
+        <!-- heading -->
+        <h1 class="text-center">HomePage Image upload project</h1>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <div id="container">
+        <!-- Images will be added here dynamically -->
+    </div>
+    <!-- Linking the external JavaScript file -->
+    <script src="script.js">
+        const container = document.getElementById('container');
+        window.onload = function() {
+                // this method will be invoked when the window is loaded
+                loadPhotos();
+            }
+            // Following method makes an API call
+        const loadPhotos = function() {
+            axios.get('https://jsonplaceholder.typicode.com/albums/2/photos', {
+                    timeout: 5000
+                })
+                .then(res => addPhotosToDOM(res.data))
+                .catch(err => console.error(err));
+        }
+        var title;
+        var url;
+        // Following method first creates an HTML DOM element as Card and then adds it inside the container
+        const addPhotosToDOM = (photos) => {
+            photos = Array.from(photos);
+            photos.forEach((photo) => {
+                title = photo.title;
+                url = photo.url;
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'card';
+                const img = document.createElement('img');
+                img.src = url;
+                const imgInfo = document.createElement('div');
+                imgInfo.className = 'img-info';
+                const heading = document.createElement('h3');
+                heading.innerText = title;
+                imgInfo.appendChild(heading);
+                cardDiv.appendChild(img);
+                cardDiv.appendChild(imgInfo);
+                container.appendChild(cardDiv);
+            })
+        }
+    </script>
+    <!-- <section>
+      <!-- heading -->
+    <h1>Post's title submitted is: Morocco-blue</h1>
+    </section>
+    <section>
+        <h2>Post's Author is: John</h2>
+    </section>
+    <section>
+        <h2>Post was created at time: 11:45PM</h2>
+    </section>
+    <section>
+        <h3>Posted Image is:</h3>
+        <!-- Image -->
+        <img src="https://amymhaddad.s3.amazonaws.com/morocco-blue.png" alt=" free image" height="100" width="100" />
+    </section>
+
+</body>
+
+</html>

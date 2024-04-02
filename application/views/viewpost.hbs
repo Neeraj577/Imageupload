@@ -1,0 +1,67 @@
+
+{{log this}}
+<div class="imagepost">
+   
+         <h2>{{currentPost.title}}</h2>
+            
+         <p>By:<strong>{{currentPost.username}}</strong> <br/>  Posted At:{{formatDate currentPost.createdAt}}</p>
+        <p class="post-description">
+                    {{currentPost.description}}
+         </p>
+               
+        <img src="/{{currentPost.image}}" alt="img" height="400" width="580"/>
+        <br/><br/>
+        <div class="comment-box">
+                <input type="text"  id="comment-text" name="comment-box-text"/>
+                <button type="submit" id="comment-button" data-postid="{{currentPost.id}}"><i class="fa fa-comment">Add Comment</i></button> 
+        </div>
+
+     <div id="comment-list" class="comment">
+        
+                {{#each currentPost.comments}}
+		        {{> comment this}}
+		{{/each}}
+                	
+    </div>
+    {{!-- <div class="sample-comment">
+        <strong class="comment-author">anotherusername88</strong>
+			<span class="comment-date">2022, Dec 12</span>
+			<div class="comment-text">this is a sample comment</div>
+                    
+    </div> --}}
+    
+   
+        
+</div>
+            
+           
+            
+            
+            
+
+            
+            
+            
+            
+            
+               
+			
+			
+            
+       
+
+            
+            
+
+
+			
+		
+           
+
+            
+
+            
+            
+         
+     
+

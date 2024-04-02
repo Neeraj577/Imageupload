@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+    Home <br/>
+    
+    </a>
+    <form class="d-flex" role="search" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded">
+        <input class="form-control input-sm" type="search" placeholder="Search" name="searchTerm" aria-label="Search">
+        <button class="btn btn-info" type="submit">Search</button>
+      </form>
+    
+        
+        <li class="nav-item active">
+          <a class="nav-brand" href="/postImage">Post Image</a>
+        </li>
+        {{#if isLoggedIn }}
+        <li class="nav-item active">
+          <a class="nav-item" id="logout-button" >Log Out</a>
+          <p>Logged in as {{username}}</p>
+          
+        </li>
+        
+          {{else}}
+          <li class="nav-item active">
+          <a class="nav-brand" href="/login">Log In</a>
+        </li>
+          {{/if}}
+        
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+    

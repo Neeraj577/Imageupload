@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <navbar>
+        <fieldset>
+            <a href="index.html" class="active">Home</a>
+            <a href="login.html">Login</a>
+
+            <a href="registration.html">Register</a>
+            <a href="viewpost.html">Images</a>
+            <a href="postimage.html">Post Images</a>
+        </fieldset>
+    </navbar>
+    <div class="postimage">
+        <section>
+            <!-- heading -->
+            <h1 class="text-center">Fill the form to post an image</h1>
+        </section>
+
+        <!-- form -->
+        <form>
+            <!-- label text -->
+            <label for="title">Enter post Title</label><br />
+
+            <!-- Input text field -->
+            <input type="text" /><br />
+            <!-- <br> is line break -->
+            <label>Enter post Description</label><br />
+            <input type="text" /><br />
+            <label for="img">Select an image</label><br />
+            <!-- image as a file input field -->
+            <!-- The accept attribute specifies a filter for what file types the user can pick from the file input dialog box. -->
+            <input type="file" id="img" name="img" accept="image/*" /><br />
+
+            <!-- user policy field -->
+            <!-- The <input type="checkbox"> defines a checkbox. -->
+            <input type="checkbox" />
+            <label for="policy">Accept the policy for uploading the images</label
+        ><br />
+
+        <!-- Submit button -->
+
+        <input type="submit" class="button" value="Submit Image Post" />
+      </form>
+    </div>
+  </body>
+</html>

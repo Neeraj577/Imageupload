@@ -1,0 +1,37 @@
+
+    
+    <div class="postimage">
+        <section>
+            <!-- heading -->
+            <h1 class="text-center">Fill the form to post an image</h1>
+        </section>
+
+        <!-- form -->
+        <form action="/posts/create"
+        method="post"
+        enctype="multipart/form-data">
+            <!-- label text -->
+            <label for="title">Enter post Title</label><br />
+
+            <!-- Input text field -->
+            <input type="text"  name="title" required/><br />
+            <!-- <br> is line break -->
+            <label>Enter post Description</label><br />
+            <input type="text" name="description" required/><br />
+            <label for="img">Select an image</label><br />
+            <!-- image as a file input field -->
+            <!-- The accept attribute specifies a filter for what file types the user can pick from the file input dialog box. -->
+            <input type="file" id="img"  required name="uploadImage" multiple /><br />
+
+            <!-- user policy field -->
+            <!-- The <input type="checkbox"> defines a checkbox. -->
+            <input type="checkbox" required/>
+            <label for="policy">Accept the policy for uploading the images</label
+        ><br />
+
+        <!-- Submit button -->
+
+        <input type="submit" class="button" value="Submit Image Post" />
+      </form>
+    </div>
+  

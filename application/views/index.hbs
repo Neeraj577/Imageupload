@@ -1,0 +1,13 @@
+<main id="main-content" style="display:flex;flex-wrap:wrap;">
+    {{#each results}}
+    <div class="cards" >
+        <p style="font-family:'Georgia',serif; font-size: 14px;">{{this.title}}</p>
+        <img src="/{{this.thumbnails}}" alt="img" style="width:250px;height:250px;object-fit:cover;"/><br/>
+        
+        <p style="font-family:'Georgia',serif; font-size: 14px;">{{this.description}}<br/><a href="/posts/{{this.id}}">Details</a></p>
+        
+    </div>
+   
+    {{/each}} 
+
+</main>

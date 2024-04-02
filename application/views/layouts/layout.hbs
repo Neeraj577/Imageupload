@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="icon" href="/public/favicon.ico" sizes="70x70" type="image/ico">
+    <link rel='stylesheet' href='/public/css/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script defer  src = "/public/js/viewpost.js"></script>
+    <script defer  src = "/public/js/script.js"></script>
+
+
+  </head>
+  <body>
+    
+    {{!-- {{#if mydata}}
+       <p> Welcome, {{mydata.username}}</p>
+    {{else}}
+    <p>user not found</p>
+    <a href="/public/html/registration.html">Register</a>
+    {{/if}} --}}
+    {{#if (nonEmptyObject message)}}
+    {{> flashmessage}}
+    {{!-- {{else}} --}}
+    {{/if}}
+    {{> header}}
+    {{> navbar}}
+    {{{body}}}
+    {{!-- {{> footer}} --}}
+  </body>
+  {{#if isLoggedIn}}
+  <script>
+    document.getElementById("logout-button").addEventListener('click', function(ev){
+      fetch('/users/logout', {method:"POST"})
+      .then(response=> response.json())
+      .then(function(res_json){
+        console.log(res_json);
+        window.location.replace('/');
+      }).catch(err => console.log(err));
+    })
+  </script>
+  {{/if}}
+  {{> footer}}
+</html>

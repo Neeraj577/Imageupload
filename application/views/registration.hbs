@@ -1,0 +1,37 @@
+
+    
+    <div class="registration">
+        <section>
+            <!-- heading -->
+            <h1 class="text-center">Login form for the image upload Website</h1>
+        </section>
+        <form 
+          action="/users/register"
+          method="POST"
+          enctype="application/x-www-form-urlencoded"
+          onsubmit="myValidation()">
+            <label for="username">Enter Your Username:</label>
+            <input type="text" name="username" /> <br /><br />
+
+            <label   for="password">Enter Your Password:</label>
+            <input  type="password" name="password" /> <br />
+            <br />
+            <label for="confirmPassword">Again Enter Your Password:</label>
+            <input type="password" name="confirmPassword" /> <br />
+            <br />
+            <label for="email">Enter Your Email:</label>
+            <input type="email" name="email" /> <br />
+            <br />
+            <input type="checkbox" id="age" name="age" value="13+ Year of Age" required="true" />
+            <label for="age">I am above 13 year of age</label> <br />
+            <br />
+            <input type="checkbox" id="tos" name="tos" value="TOS and privacy rules" required="true" />
+            <label for="tos">
+          I agree with <a href="#privacy">TOS and other privacy rules</a></label
+        >
+        <br />
+        <br />
+        <input type="submit" name="submit" value="Submit" class="button" />
+      </form>
+    </div>
+ 

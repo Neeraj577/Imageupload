@@ -1,0 +1,134 @@
+body {
+    padding: 50px;
+    background: linear-gradient(to right, #0ff0bf, #bdf416);
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.header {
+    font-family: fantasy;
+    color: #c9821d;
+    padding-top: .5em;
+    border: 1px solid #a2a2a2;
+    background-color: #13b9df;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+a {
+    color: #cce927;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.loginbox {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+.registration {
+    width: 800px;
+    margin: 0 auto;
+    background-color: palegreen;
+    padding: 20px;
+}
+
+.postimage {
+    width: 300px;
+    margin: 0 auto;
+    background-color: rgb(18, 152, 210);
+    padding: 20px;
+}
+
+.imagepost {
+    height: 98%;
+    margin: 0 auto;
+    background-color: rgb(186, 198, 224);
+    padding: 20px;
+    text-align: center;
+}
+
+.img {
+    display: block;
+    width: 50%;
+}
+
+.button {
+    background-color: #4caf50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+}
+
+
+/* .footer {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+} */
+
+
+/* //navbar  */
+
+body {
+    margin: 0;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: rgb(229, 26, 219);
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.cards {
+    justify-content: center;
+    margin: 4vh 2vh;
+    border: 2px solid rgb(216, 30, 30);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.cards p {
+    text-align: center;
+}
+
+.cards img {
+    width: 100%;
+    height: 70%;
+}
